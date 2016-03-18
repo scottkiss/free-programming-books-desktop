@@ -1,11 +1,11 @@
-# electron-free-programming-books
+# free-programming-books-desktop
 
 **an application for free-programming-books.**
 
 
 ## About
-Electron-free-programming-books is an application which Synchronize the List of Free Learning 
-Resources from the project [free-programming-books](https://github.com/vhf/free-programming-books) and read them without web browser.
+Free-programming-books-desktop is an application which synchronize the list of free learning 
+resources from the project [free-programming-books](https://github.com/vhf/free-programming-books) and read them without web browser.
 Built using [Electron](http://electron.atom.io/).
 
 
@@ -17,9 +17,9 @@ Built using [Electron](http://electron.atom.io/).
 ## Developers
 
 ```
-git clone https://github.com/scottkiss/electron-free-programming-books.git
+git clone https://github.com/scottkiss/free-programming-books-desktop.git
 
-cd electron-free-programming-books && npm install
+cd free-programming-books-desktop && npm install
 
 npm start
 
@@ -37,4 +37,4 @@ npm run build:win
 
 
 ## License
-view the [LICENSE](https://github.com/scottkiss/electron-free-programming-books/blob/master/LICENSE.md) file
+view the [LICENSE](https://github.com/scottkiss/free-programming-books-desktop/blob/master/LICENSE.md) file

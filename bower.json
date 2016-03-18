@@ -1,5 +1,5 @@
 {
-  "name": "electron-free-programming-books",
+  "name": "free-programming-books-desktop",
   "description": "free-programming-books app",
   "main": "main.js",
   "authors": [
@@ -12,7 +12,7 @@
     "books",
     "tutorial"
   ],
-  "homepage": "https://github.com/scottkiss/electron-free-programming-books",
+  "homepage": "https://github.com/scottkiss/free-programming-books-desktop",
   "moduleType": [],
   "ignore": [
     "**/.*",
