@@ -1,0 +1,34 @@
+{
+  "name": "electron-free-programming-books",
+  "version": "1.0.0",
+  "description": "free-programming-books application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron main.js",
+    "build": "./scripts/build-all.sh",
+    "build:osx": "./scripts/build.sh darwin x64",
+    "build:win": "./scripts/build.sh win32 ia32"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scottkiss/electron-free-programming-books.git"
+  },
+  "keywords": [
+    "Electron",
+    "books",
+    "free",
+    "programming"
+  ],
+  "author": "scottkiss",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/scottkiss/electron-free-programming-books/issues"
+  },
+  "homepage": "https://github.com/scottkiss/electron-free-programming-books#readme",
+  "dependencies": {
+    "electron-prebuilt": "^0.36.9",
+    "electron-packager": "^5.2.1",
+    "nodegrass":"0.0.3",
+    "cheerio":"0.20.0"
+  }
+}

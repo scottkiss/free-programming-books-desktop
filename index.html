@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Free books</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+    <link rel="import" href="bower_components/polymer/polymer.html" />
+    <script src="assets/js/index.js"></script>
+    <script src="data/zh.js"></script>
+    <script src="data/en.js"></script>
+
+    <link rel="import" href="components/c-nav/index.html" />
+    <link rel="import" href="components/panel-english/index.html" />
+    <link rel="import" href="components/panel-azerbaijan/index.html" />
+    <link rel="import" href="components/panel-bulgarian/index.html" />
+    <link rel="import" href="components/panel-chinese/index.html" />
+    <link rel="import" href="components/panel-czech/index.html" />
+    <link rel="import" href="components/panel-more/index.html" />
+    <link rel="import" href="components/c-content/index.html" />
+ </head>
+
+<body class="bg c1">
+<div id="wrapper">
+    <c-nav class="sidebar">
+        <ul class="nav">
+            <li title="Azerbaijan" class="">Azerbaijan</li>
+            <li title="Bulgarian" class="">Bulgarian</li>
+            <li title="Chinese" class="active">Chinese</li>
+            <li title="Czech" class="">Czech</li>
+            <li title="English" class="">English</li>
+            <li title="More" class="">More</li>
+        </ul>
+       <div class="content">
+            <panel-azerbaijan></panel-azerbaijan>
+            <panel-bulgarian></panel-bulgarian>
+            <panel-chinese class="active"></panel-chinese>
+            <panel-czech></panel-czech>
+            <panel-english></panel-english>
+            <panel-more></panel-more>
+        </div>
+    </c-nav>
+    <c-content></c-content>
+</div>
+</script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+var SELECTED_CATEGORIES = [];

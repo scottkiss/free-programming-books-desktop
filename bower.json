@@ -1,0 +1,27 @@
+{
+  "name": "electron-free-programming-books",
+  "description": "free-programming-books app",
+  "main": "main.js",
+  "authors": [
+    "scottkiss"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "Electron",
+    "free",
+    "books",
+    "tutorial"
+  ],
+  "homepage": "https://github.com/scottkiss/electron-free-programming-books",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.3.1"
+  }
+}
