@@ -1,0 +1,92 @@
+<dom-module id="c-category" attributes="category active">
+  <template>
+    <style>
+      div {
+        position: relative;
+        height: 10vh;
+        margin: 0vh 1.5vh 2vh 0;
+        border: 1px solid rgba(255,255,255,0.2);
+        background: rgba(255,255,255,0.2);
+        box-shadow: 0 0 1px rgba(0,0,0,0.15);
+        text-align: left;
+        cursor: pointer;
+      }
+
+      div:hover,div.active {
+        background: rgba(250,250,250,0.4);
+        transition: background 0.2s ease-in;
+      }
+
+      h3 {
+        position: absolute;
+        left: 21vh;
+        top: 1vh;
+        right: 2vw;
+        height: 7vh;
+        line-height: 7vh;
+        margin: 0;
+        font-size: 4vh;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-weight: normal;
+      }
+
+    </style>
+
+      <div data-id="{{category.id}}" on-click="selectCategory"
+                   class="{{active? 'active' : ''}}">
+       <h3>{{category.name}}</h3> 
+      </div>
+      </template>
+      <script>
+        Polymer({
+            is:'c-category',
+            active : false,
+            category : {},
+            ready : function() {
+                self = this;
+            },
+            selectCategory : function() {
+              //alert(this.category.lan);
+              
+              var list = build_content(this.category.lan,this.category.name);
+              var div_content = document.getElementById('content_main');
+              div_content.innerHTML = list;
+            }
+        });
+
+        function build_content(lan,category_name){
+          var categories = [];
+          var content_html = "<ul class='nav'>";
+              switch (lan){
+                case "zh" :
+                  categories = zh_categories;
+                  break;
+                case "en" :
+                  categories = en_categories;
+                  break;
+                default :
+                  categories = en_categories;
+              }
+              for(var i=0;i<categories.length;i++){
+                var content = categories[i].content;
+                var name = categories[i].name;
+                if(name == category_name){
+                  for(var j=0;j<content.length;j++){
+                    var src = content[j].src;
+                    var text = content[j].text;
+                    content_html += '<li>';
+                    content_html += '<a href="'+src+'">'+text+'</a>';
+                    content_html += '</li>';
+                  }
+                }
+              }
+
+          content_html += "</ul>";
+          return content_html;
+        }
+
+        </script>
+        </dom-module>
+

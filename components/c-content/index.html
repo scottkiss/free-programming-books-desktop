@@ -1,0 +1,24 @@
+<dom-module id="c-content" attributes="">
+    <template>
+      <style>
+        .main{
+          overflow:auto;
+          height:100%;
+          width:100%;
+        } 
+         ul li{
+          text-align:left;
+        }
+      </style> 
+    <div class="main" id="content_main">
+    </div>
+    </template>
+    <script>
+        Polymer({
+            is:'c-content',
+            ready : function() {
+              this.categories = SELECTED_CATEGORIES;
+            }
+        })
+    </script>
+</dom-module>

@@ -1,0 +1,77 @@
+<link rel="import" href="../c-category/index.html" />
+<dom-module id="panel-english">
+  <template>
+    <style>
+      .content {
+        position: relative;
+        width: 100%;
+      }
+      section {
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        height: 85vh;
+        margin-top: 2vh;
+        overflow: auto;
+        opacity: 0;
+        -webkit-transform: scale(0.95);
+      }
+
+      section.active {
+        z-index: 2;
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transition: all 0.4s ease-in;
+      }
+
+      .small {
+        left: -1px;
+        top: -1px;
+      }
+
+      .small /deep/ div {
+        line-height: 20vh;
+        margin-left: 1px;
+        margin-top: 1px;
+        text-align: center;
+      }
+
+      .small /deep/ img, .small /deep/ i, .small /deep/ b, .small /deep/ p {
+        display: none;
+      }
+
+      .small /deep/ h3 {
+        position: static;
+        height: 10vh;
+        line-height: 10vh;
+        margin: 0;
+        font-size: 12px;
+      }
+    </style>
+    <div class="content">
+      <section class="small active">
+        <template is="dom-repeat" items="{{categories}}">
+          <c-category category="{{item}}" active="{{item.id == selectedId}}"></c-category>
+        </template>
+      </section>
+    </div>
+  </template>
+  <script>
+    Polymer({
+        is:'panel-english',
+        properties:{
+          categories:{
+            type: Array,
+            notify: true
+          }
+        },
+        ready:function(){
+          this.categories = en_categories;
+          SELECTED_CATEGORIES = en_categories;
+        }
+    });
+  </script>
+</dom-module>
